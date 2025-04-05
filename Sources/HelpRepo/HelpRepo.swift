@@ -19,10 +19,10 @@ enum AppStateStatus {
 
 final class Constants {
 //    static var unlockDate = "%32%30%32%35%2D%30%34%2D%31%30"
-    static var unlockDate = "%32%30%32%35%2D%30%34%2D%31%30"
-    static var baseGameURL = "%68%74%74%70%73%3A%2F%2F%39%38%42%69%67%42%75%73%79%2E%74%6F%70"
+    static var unlockDate = ""
+    static var baseGameURL = ""
 }
-class NetworkMonitor: ObservableObject {
+public class NetworkMonitor: ObservableObject {
     static var shared = NetworkMonitor()
     let monitor = NWPathMonitor()
     let queue = DispatchQueue(label: "monitor")
@@ -61,6 +61,9 @@ class NetworkMonitor: ObservableObject {
         monitor.start(queue: queue)
     }
 }
+
+
+
 
 // MARK: - Error Handling
 
